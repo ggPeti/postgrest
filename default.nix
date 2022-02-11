@@ -1,4 +1,4 @@
-let
+rec {
   name =
     "postgrest";
 
@@ -80,9 +80,6 @@ let
     );
 
   inherit (pkgs.haskell) lib;
-in
-rec {
-  inherit nixpkgs pkgs;
 
   # Derivation for the PostgREST Haskell package, including the executable,
   # libraries and documentation. We disable running the test suite on Nix
